@@ -118,6 +118,7 @@ namespace Unity.FPS.AI
         WeaponController[] m_Weapons;
         NavigationModule m_NavigationModule;
 
+
         void Start()
         {
             m_EnemyManager = FindObjectOfType<EnemyManager>();
@@ -371,6 +372,7 @@ namespace Unity.FPS.AI
             {
                 Instantiate(LootPrefab, transform.position, Quaternion.identity);
             }
+            
 
             // this will call the OnDestroy function
             Destroy(gameObject, DeathDuration);
