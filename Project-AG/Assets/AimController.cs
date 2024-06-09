@@ -49,12 +49,13 @@ public class AimController : MonoBehaviour
 
             // Rotate the player body to face the target direction horizontally
             playerBody.rotation = Quaternion.Euler(0, yaw, 0);
+            //playerBody.rotation = Quaternion.Euler(0, yaw, 0);
 
             // Rotate the camera to face the target direction vertically
             playerCamera.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
 
-            // Simulate mouse click
-            SimulateMouseClick();
+            // Invoke SimulateMouseClick with a 0.1 second delay
+            Invoke("SimulateMouseClick", 0.1f);
 
             // Reset the flag
             isTargetPositionReceived = false;
